@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    tools:context=".MovieDetail.MovieDetailFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/vote_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/_10"
+        android:textColor="#2E3E05"
+        app:layout_constraintBottom_toBottomOf="@+id/movie_release_date"
+        app:layout_constraintStart_toEndOf="@+id/movie_release_date"
+        app:layout_constraintTop_toTopOf="@+id/movie_release_date" />
+
+    <ImageView
+        android:id="@+id/movie_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/movie_backdrop"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/detail_poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="140dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/movie_poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/movie_backdrop" />
+
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="#DC1515"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/detail_poster"
+        app:layout_constraintTop_toBottomOf="@+id/movie_backdrop"
+        tools:text="The Shawshank Redemption" />
+
+    <TextView
+        android:id="@+id/movie_overview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_poster"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency." />
+
+    <TextView
+        android:id="@+id/movie_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#0A1D61"
+        app:layout_constraintStart_toEndOf="@+id/detail_poster"
+        app:layout_constraintTop_toBottomOf="@+id/detail_title"
+        tools:text="14 October 1994" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
